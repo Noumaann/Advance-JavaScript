@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance JS</title>
+
+    <script>
+
+// Template String
+   
+
+       /* let  a="Hello world";
+        let b="wassup";
+        let c=`Hey ${a} ${b}`
+       // document.write(`Hey ${a} ${b}`);    //template string
+         document.write(c);
+
+//differnet way using template
+
+        let fname="nomi";
+        let lname="faisal";
+
+        function fullname(fname, lname){
+            return `${fname} ${lname}`;
+        }
+        
+        let user= `Hey  ${fullname(fname,lname)}`;
+        
+        document.write(user);
+        console.log(user);*/
+
+// Arrow Function
+
+      /*/  let user = (name, age)=> 
+        {
+            return ` ${name}  ${age}`
+        }
+         console.log(user("Nomi",24 ));
+
+
+// Reducing the code into single line
+
+    let a = name => ` ${name}`; 
+     console.log(a("Nomi"));    //single line code, using arrow function
+     console.log(typeof a);*/  //functon
+
+
+
+        
+
+
+// Rest Operator
+
+    /*    function sum(name, ...args){
+            document.write(`${name} :`);
+            
+
+            let sum = 0;
+            for(let i in args){
+                sum += args[i]
+            }
+            document.write(sum+"<br>")
+
+        }
+
+        sum("Nomi",10,20,30,40,50);*/
+
+
+
+
+// Spread Operator 
+
+//help to reduce push n concat
+
+     /*   var arr=[10,20,30,40];
+
+        var arr2=[50,60];
+
+        var arr3= [...arr, ...arr2];
+        console.log(...arr3);
+
+            
+//
+        var obj1={
+            name:"Nomi"
+        };
+        var obj2={
+            age:24,
+        };
+        var obj3={...obj1, ...obj2};
+
+        console.log(obj3);*/
+
+        
+
+
+
+
+
+//Object Literals        
+
+
+      /*  let  name="Nomi";
+        let cou="B.E";
+
+        var obj={        // shortcut in ES6 version, same name of object
+        
+            name,
+            cou,
+        };
+        console.log(obj);
+
+
+
+
+        let n="nick";   //varaiable n property name will b same
+
+        var obj={
+            [n+"name"]:"Nomi",
+            age: 24,
+        };
+        console.log(obj);
+
+
+
+
+// using function
+
+        let m ="studnet";
+    
+        var ob={
+            [m+"name"]:"Furqan",
+            course:"M.pharma",
+
+            'detail'(){
+                return `${this.studentname}  ${this.course}`
+            }
+
+        };
+        console.log(ob);
+        console.log(ob['detail']());*/
+
+
+
+
+// Destructing Array
+
+      /*  let user=["Google",  27, "London"["male"]];//nested Array also usie in destructing Array
+
+        let [name,  age, city, [Gender]]=user;
+
+        console.log(name);
+        console.log(age);
+        console.log(city);
+        console.log(gender);*/
+
+
+//DA is use in function as well
+
+      /*  function prop([name, age ,salary]){
+            
+        console.log(name);
+        console.log(age);
+        console.log(salary);
+        }
+
+        prop(["Nomi", 24, "Male"])
+
+
+    //another way of using functon
+
+        function x(){
+            return ["Nomi", 24, "Male"];
+        }
+        let [name, age ,salary]=x();
+        console.log(age);*/
+
+
+
+//Destructring Object    
+
+  /*  let x={
+            name:   "Nomi",
+            age:  24,
+            city: "Bangalore",
+        }
+        let {name:n, age ,city}=x;  // we take alice name
+
+        console.log(n);
+        console.log(age);
+
+        console.log(city);*/
+
+
+
+        //----------Oop-------\\ 
+
+
+// class, Object
+
+
+/*class Student{
+    constructor(n, a){
+         this.name=n;
+         this.age=a;
+        console.log("constructor function");
+    }
+    hello(){             //prototype Method
+        console.log(`${this.name} ${this.age}`)
+    }
+    static staticM(){    //static Method
+        console.log("static function");
+    }
+}
+    let a=new Student("Hello World", 2023
+     );
+    let b=new Student("Bye World", 2022);
+
+    //a.name="Hello World"; // previous method
+    a.hello();//Method call
+    b.hello();
+    Student.staticM();*/
+
+
+
+
+
+
+//Inheritance
+
+  /*  class Employee{
+        constructor(name){
+            console.log("Const : Emp :" + name);
+        }
+    }
+
+    class Manager extends Employee{
+        constructor(name){
+            super();    //To call Super class method 
+            console.log("Const : Manager :" + name);
+        }
+    }
+
+    let a = new Manager("Nomi");   */  
+    
+    
+
+    //Real life example
+
+   /* class Employee{
+        constructor(name, age, salary){
+            this.empname = name;
+            this.empage = age;
+            this.empsalary = salary;
+            console.log("Construtor : Emp " );
+        }
+        info(){
+            document.write(`<h3> Employee Class </h3> Name : ${this.empname}<br> 
+            Age : ${this.empage}<br>
+            Salary : ${this.empsalary}<br> `);
+        }
+    }
+
+    class Manager extends Employee{
+
+        info(){
+        let ta = 1000;
+        let pa =300;
+        let totalsalary = this.empsalary + ta + pa;
+
+            document.write(`<h3> Manager Class </h3> Name : ${this.empname}<br> 
+            Age : ${this.empage}<br>
+            Salary : ${totalsalary}<br> `);
+        }
+
+    }
+        // info(){
+        //     super.info();
+        //     console.log("Manager : info :" +this.empname );
+        // }
+    
+
+    let a = new Manager("Nomi", 24, 22000);  
+    let b = new Employee("Khabib", 30, 22000000);  
+    a.info();
+    b.info();*/
+
+
+
+
+//Multi Level Inheritance
+    
+    class Employee{
+        constructor(name, age, salary){
+            this.empname = name;
+            this.empage = age;
+            this.empsalary = salary;
+            console.log("Construtor : Emp " );
+        }
+        info(){
+            document.write(`<h3> Employee Class </h3> Name : ${this.empname}<br> 
+            Age : ${this.empage}<br>
+            Salary : ${this.empsalary}<br> `);
+        }
+    }
+
+    class Manager extends Employee{
+
+        info(){
+        let ta = 1000;
+        let pa =300;
+        let totalsalary = this.empsalary + ta + pa;
+
+            document.write(`<h3> Manager Class </h3> Name : ${this.empname}<br> 
+            Age : ${this.empage}<br>
+            Salary : ${totalsalary}<br> `);
+        }
+
+    }
+     
+    class test extends Manager{
+
+    }
+
+    let a = new test("Nomi", 24, 22000);  
+    a.info();
+  
+
+
+    </script>
+</head>
+<body>
+    
+    
+
+
+</body>
+</html>
